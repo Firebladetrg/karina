@@ -28,12 +28,10 @@ header h1 em{font-style:italic;color:var(--rose)}
 header p{color:var(--lav);font-size:.78rem;margin-top:.2rem;font-weight:300}
 main{position:relative;z-index:10;max-width:820px;margin:0 auto;padding:1.3rem .9rem 4rem;display:flex;flex-direction:column;gap:1.1rem}
 .card{background:var(--cb);border:1px solid var(--brd);border-radius:18px;padding:1.2rem;box-shadow:var(--sh);backdrop-filter:blur(8px)}
-/* TABS */
 .tabs{display:flex;gap:4px;margin-bottom:1rem}
-.tab{flex:1;padding:.44rem .3rem;border-radius:8px;border:1px solid var(--brd);background:var(--warm);font-family:'DM Sans',sans-serif;font-size:.72rem;color:var(--muted);cursor:pointer;text-align:center;transition:all .18s;white-space:nowrap}
+.tab{flex:1;padding:.44rem .2rem;border-radius:8px;border:1px solid var(--brd);background:var(--warm);font-family:'DM Sans',sans-serif;font-size:.7rem;color:var(--muted);cursor:pointer;text-align:center;transition:all .18s;white-space:nowrap}
 .tab.on{background:var(--rose);color:#fff;border-color:var(--rose);font-weight:500}
 .tp{display:none}.tp.on{display:block}
-/* FORM */
 .ct{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--terra);margin-bottom:.85rem;display:flex;align-items:center;gap:7px}
 .fg{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
 .fg3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.8rem}
@@ -44,17 +42,14 @@ input[type=time],input[type=text],textarea{font-family:'DM Sans',sans-serif;font
 input:focus,textarea:focus{border-color:var(--rose);box-shadow:0 0 0 3px rgba(212,168,154,.13)}
 textarea{resize:vertical;min-height:56px}
 .sep{border:none;border-top:1px solid var(--brd);margin:.8rem 0}
-/* NAP BLOCKS */
 .nb{background:rgba(242,228,216,.38);border-radius:11px;padding:.85rem;margin-bottom:.6rem;border:1.5px solid rgba(212,168,154,.18);transition:border-color .3s,background .3s}
 .nb.saved{border-color:var(--ok);background:rgba(123,174,140,.07)}
 .nt{font-size:.71rem;font-weight:600;color:var(--terra);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:.4px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:3px}
 .nstat{font-size:.72rem;color:var(--ok);font-weight:600}
-/* MOOD */
 .mg{display:flex;gap:5px;flex-wrap:wrap}
 .mb{background:var(--warm);border:1px solid var(--brd);border-radius:14px;padding:3px 10px;font-family:'DM Sans',sans-serif;font-size:.74rem;color:var(--muted);cursor:pointer;transition:all .18s}
 .mb:hover{border-color:var(--rose);color:var(--terra)}
 .mb.on{background:var(--rose);border-color:var(--rose);color:#fff;font-weight:500}
-/* BUTTONS */
 .bsave{width:100%;margin-top:.7rem;background:rgba(184,112,96,.1);border:1px solid var(--rose);border-radius:8px;padding:.42rem;font-family:'DM Sans',sans-serif;font-size:.76rem;color:var(--terra);cursor:pointer;transition:all .18s;font-weight:500}
 .bsave:hover{background:rgba(184,112,96,.18)}
 .bsave.ok{background:rgba(123,174,140,.14);border-color:var(--ok);color:#4a8a5c}
@@ -63,12 +58,12 @@ textarea{resize:vertical;min-height:56px}
 .banalyze:hover{transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,112,96,.38)}
 .banalyze:active{transform:translateY(0)}
 .banalyze:disabled{opacity:.6;cursor:not-allowed;transform:none}
-/* TODAY STATS */
+.banalyze.weekly{background:linear-gradient(135deg,#4a6fa5,#6b8cba);box-shadow:0 4px 16px rgba(74,111,165,.28)}
+.banalyze.weekly:hover{box-shadow:0 6px 22px rgba(74,111,165,.38)}
 .mets{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:.85rem}
 .met{background:rgba(242,228,216,.45);border-radius:10px;padding:.65rem;text-align:center;border:1px solid var(--brd)}
 .mv{font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--terra)}
 .ml{font-size:.61rem;color:var(--muted);text-transform:uppercase;letter-spacing:.3px;margin-top:2px}
-/* RESPONSE */
 #rc{display:none;background:linear-gradient(160deg,var(--night),var(--night2));border-radius:18px;padding:1.4rem;color:var(--moon);box-shadow:0 8px 32px rgba(28,21,32,.28)}
 .rtitle{font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--rose);margin-bottom:.8rem;display:flex;align-items:center;gap:7px}
 #rb{font-size:.85rem;line-height:1.85;color:var(--moon);white-space:pre-wrap}
@@ -79,31 +74,33 @@ textarea{resize:vertical;min-height:56px}
 /* HISTORY */
 .he{border-left:3px solid var(--rose);padding:.6rem .85rem;margin-bottom:.5rem;background:rgba(242,228,216,.25);border-radius:0 9px 9px 0;font-size:.76rem}
 .he.today-entry{border-left-color:var(--ok);background:rgba(123,174,140,.06)}
+.he.empty-entry{border-left-color:rgba(212,168,154,.3);background:rgba(242,228,216,.1);opacity:.75}
 .hdate{font-weight:600;color:var(--terra);font-size:.74rem;margin-bottom:.28rem;display:flex;align-items:center;gap:5px;flex-wrap:wrap}
 .badge{font-size:.6rem;border-radius:9px;padding:1px 6px;font-weight:500;color:#fff}
 .badge-today{background:var(--ok)}
 .badge-xl{background:var(--muted)}
+.badge-empty{background:rgba(140,112,96,.4);color:#fff}
 .hnaps{display:flex;flex-wrap:wrap;gap:4px;margin:.28rem 0}
 .hnap{background:rgba(212,168,154,.18);border-radius:7px;padding:2px 7px;font-size:.7rem;color:var(--deep)}
 .hrow{color:var(--muted);font-size:.7rem;margin-top:.22rem}
 .hrow strong{color:var(--deep);font-weight:500}
 .hnote{color:var(--muted);font-size:.67rem;margin-top:.25rem;font-style:italic}
 .htag{display:inline-block;background:var(--blush);color:var(--terra);border-radius:14px;padding:1px 7px;font-size:.62rem;font-weight:500}
-.hedit-btn{font-size:.65rem;color:var(--rose);background:none;border:1px solid rgba(212,168,154,.4);border-radius:6px;padding:2px 7px;cursor:pointer;margin-left:auto;flex-shrink:0;font-family:'DM Sans',sans-serif}
+.hedit-btn{font-size:.63rem;color:var(--rose);background:none;border:1px solid rgba(212,168,154,.4);border-radius:6px;padding:2px 8px;cursor:pointer;margin-left:auto;flex-shrink:0;font-family:'DM Sans',sans-serif;white-space:nowrap}
 .hedit-btn:hover{background:rgba(212,168,154,.15)}
-/* EDIT MODAL */
-#modal-overlay{display:none;position:fixed;inset:0;background:rgba(28,21,32,.6);z-index:100;align-items:flex-start;justify-content:center;padding:1.5rem .8rem;overflow-y:auto}
+/* MODAL */
+#modal-overlay{display:none;position:fixed;inset:0;background:rgba(28,21,32,.65);z-index:100;align-items:flex-start;justify-content:center;padding:1.2rem .7rem;overflow-y:auto}
 #modal-overlay.open{display:flex}
-#modal{background:var(--warm);border-radius:18px;width:100%;max-width:600px;padding:1.4rem;box-shadow:0 20px 60px rgba(28,21,32,.4);margin:auto}
-.modal-title{font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--terra);margin-bottom:1rem;display:flex;align-items:center;justify-content:space-between}
+#modal{background:var(--warm);border-radius:18px;width:100%;max-width:600px;padding:1.3rem;box-shadow:0 20px 60px rgba(28,21,32,.4);margin:auto}
+.modal-title{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--terra);margin-bottom:.9rem;display:flex;align-items:center;justify-content:space-between}
 .modal-close{background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--muted);line-height:1}
+.msec{font-size:.68rem;font-weight:600;color:var(--terra);text-transform:uppercase;letter-spacing:.4px;margin:.7rem 0 .4rem}
 /* ILLO */
 .illo{width:100%;height:112px;background:linear-gradient(135deg,#F0E8F5,#E8D8F0 40%,#D8E8F5);border-radius:12px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;margin-bottom:.9rem}
 .bwrap{animation:breathe 4s ease-in-out infinite}
 @keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
 .zzz{position:absolute;font-family:'DM Serif Display',serif;color:var(--lav);opacity:0;animation:fup var(--fd,3s) var(--fl,0s) ease-in-out infinite}
 @keyframes fup{0%{opacity:.7;transform:translateY(0) scale(1)}100%{opacity:0;transform:translateY(-34px) scale(.4)}}
-/* api box */
 .api-box{background:rgba(232,223,240,.28);border-radius:10px;padding:.8rem;border:1px solid rgba(196,176,212,.28);margin-bottom:.9rem}
 .api-hint{font-size:.67rem;color:var(--muted);margin-top:.3rem;line-height:1.5}
 </style>
@@ -166,21 +163,19 @@ textarea{resize:vertical;min-height:56px}
   <div class="tabs">
     <button class="tab on" onclick="ST('day')" id="tb-day">☀️ Ден &amp; Нощ</button>
     <button class="tab" onclick="ST('history')" id="tb-history">📅 История</button>
-    <button class="tab" onclick="ST('trends')" id="tb-trends">📊 Тенденции</button>
+    <button class="tab" onclick="ST('trends')" id="tb-trends">📊 Графики</button>
     <button class="tab" onclick="ST('settings')" id="tb-settings">⚙️</button>
   </div>
 
-  <!-- ═══════════ TAB: ДЕН & НОЩ ═══════════ -->
+  <!-- TAB: ДЕН & НОЩ -->
   <div id="tp-day" class="tp on">
     <div class="ct"><span>📅</span> Данни за деня</div>
     <div class="fg" style="margin-bottom:.8rem">
-      <div class="f"><label>Дата</label><input type="text" id="date" placeholder="13.03"/></div>
+      <div class="f"><label>Дата</label><input type="text" id="date" placeholder="17.03"/></div>
       <div class="f"><label>Сутрешно събуждане</label><input type="time" id="wt" onchange="quickSave('morning_wake','wt')"/></div>
     </div>
     <hr class="sep">
     <div class="ct" style="font-size:.9rem;margin-bottom:.7rem"><span>💤</span> Дрямки</div>
-
-    <!-- NAP 1 -->
     <div class="nb" id="nb1">
       <div class="nt">🌅 Дрямка 1 — Сутрешна <span class="nstat" id="ns1"></span></div>
       <div class="fg3">
@@ -200,8 +195,6 @@ textarea{resize:vertical;min-height:56px}
       </div>
       <button class="bsave" id="sb1" onclick="saveNap(1)">💾 Запази дрямка 1</button>
     </div>
-
-    <!-- NAP 2 -->
     <div class="nb" id="nb2">
       <div class="nt">☀️ Дрямка 2 — Обедна <span class="nstat" id="ns2"></span></div>
       <div class="fg3">
@@ -221,8 +214,6 @@ textarea{resize:vertical;min-height:56px}
       </div>
       <button class="bsave" id="sb2" onclick="saveNap(2)">💾 Запази дрямка 2</button>
     </div>
-
-    <!-- NAP 3 -->
     <div class="nb" id="nb3">
       <div class="nt">
         <span>🌆 Дрямка 3 &nbsp;<span style="color:var(--bad);font-size:.61rem">⚠ край до 16:15!</span></span>
@@ -245,8 +236,6 @@ textarea{resize:vertical;min-height:56px}
       </div>
       <button class="bsave" id="sb3" onclick="saveNap(3)">💾 Запази дрямка 3</button>
     </div>
-
-    <!-- NIGHT -->
     <hr class="sep">
     <div class="ct" style="font-size:.9rem;margin-bottom:.7rem"><span>🌙</span> Нощен сън</div>
     <div class="fg" style="margin-bottom:.8rem">
@@ -271,45 +260,54 @@ textarea{resize:vertical;min-height:56px}
     </div>
     <button class="bsave" id="sbn" style="margin-bottom:1rem" onclick="saveNight()">💾 Запази нощните данни</button>
     <hr class="sep">
-    <button class="banalyze" id="abtn" onclick="analyze()"><span>🌙</span> Анализирай деня с AI</button>
+    <button class="banalyze" id="abtn" onclick="analyze('day')" style="margin-bottom:.6rem"><span>🌙</span> Анализирай деня с AI</button>
+    <button class="banalyze weekly" id="wbtn" onclick="analyze('week')"><span>📊</span> Анализирай седмицата с AI</button>
   </div>
 
-  <!-- ═══════════ TAB: ИСТОРИЯ ═══════════ -->
+  <!-- TAB: ИСТОРИЯ -->
   <div id="tp-history" class="tp">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.7rem;flex-wrap:wrap;gap:.5rem">
+      <span style="font-family:'DM Serif Display',serif;font-size:1rem;color:var(--terra)">📅 История</span>
+      <button class="banalyze weekly" style="width:auto;padding:.4rem .9rem;font-size:.76rem;border-radius:9px" onclick="analyze('week')">📊 Седмичен анализ</button>
+    </div>
     <div id="hlist"><p style="color:var(--muted);font-size:.82rem;padding:.4rem 0">Зареждане...</p></div>
   </div>
 
-  <!-- ═══════════ TAB: ТЕНДЕНЦИИ ═══════════ -->
+  <!-- TAB: ГРАФИКИ -->
   <div id="tp-trends" class="tp">
-    <p style="font-size:.76rem;color:var(--muted);margin-bottom:.8rem">Последните 28 дни</p>
+    <p style="font-size:.74rem;color:var(--muted);margin-bottom:.8rem">Последните 28 дни</p>
     <div style="position:relative;width:100%;height:165px"><canvas id="ch1"></canvas></div>
-    <p style="font-size:.68rem;color:var(--muted);text-align:center;margin:.3rem 0 .9rem">🌙 Час на нощно заспиване (цел: 19:00–19:30)</p>
-    <div style="position:relative;width:100%;height:150px"><canvas id="ch2"></canvas></div>
-    <p style="font-size:.68rem;color:var(--muted);text-align:center;margin:.3rem 0 .9rem">☀️ Общ дневен сън в часове (цел: под 3.5ч)</p>
-    <div style="position:relative;width:100%;height:150px"><canvas id="ch3"></canvas></div>
-    <p style="font-size:.68rem;color:var(--muted);text-align:center;margin:.3rem 0 0">🌙 Нощен сън в часове (цел: 11–12ч)</p>
+    <p style="font-size:.66rem;color:var(--muted);text-align:center;margin:.3rem 0 .9rem">🌙 Час на нощно заспиване (цел: 19:00–19:30)</p>
+    <div style="position:relative;width:100%;height:148px"><canvas id="ch2"></canvas></div>
+    <p style="font-size:.66rem;color:var(--muted);text-align:center;margin:.3rem 0 .9rem">☀️ Общ дневен сън в часове (цел: под 3.5ч)</p>
+    <div style="position:relative;width:100%;height:148px"><canvas id="ch3"></canvas></div>
+    <p style="font-size:.66rem;color:var(--muted);text-align:center;margin:.3rem 0 0">🌙 Нощен сън в часове (цел: 11–12ч)</p>
   </div>
 
-  <!-- ═══════════ TAB: НАСТРОЙКИ ═══════════ -->
+  <!-- TAB: НАСТРОЙКИ -->
   <div id="tp-settings" class="tp">
     <div class="ct"><span>⚙️</span> Настройки</div>
     <div class="api-box">
       <div class="f"><label>Anthropic API ключ</label>
         <input type="text" id="apikey" placeholder="sk-ant-api03-..." style="font-family:monospace;font-size:.74rem"/>
       </div>
-      <p class="api-hint">Необходим за AI анализа. Вземи безплатен ключ от <strong>console.anthropic.com</strong> → API Keys.<br>Пази се само в браузъра ти.</p>
+      <p class="api-hint">
+        Вземи ключ от <strong>console.anthropic.com</strong> → API Keys.<br>
+        Изисква заредени кредити (минимум $5 еднократно).<br>
+        Ключът се пази само локално в твоя браузър.
+      </p>
       <button class="bsave" style="margin-top:.55rem" onclick="doSaveKey()">💾 Запази API ключ</button>
       <div id="api-msg" style="font-size:.7rem;margin-top:.35rem;color:var(--ok)"></div>
     </div>
     <hr class="sep">
-    <p style="font-size:.72rem;color:var(--muted);margin-bottom:.55rem">Excel историята е вградена и не се изтрива.</p>
+    <p style="font-size:.72rem;color:var(--muted);margin-bottom:.55rem">Excel историята е вградена и не се изтрива при изчистване.</p>
     <button class="bsave danger" onclick="clearLocal()">🗑 Изчисти локалните данни</button>
   </div>
 </div>
 
 <!-- AI RESPONSE -->
 <div id="rc">
-  <div class="rtitle"><span>✨</span> AI Анализ</div>
+  <div class="rtitle"><span>✨</span> <span id="rc-title">AI Анализ</span></div>
   <div id="rb"></div>
 </div>
 
@@ -317,56 +315,56 @@ textarea{resize:vertical;min-height:56px}
 <div id="modal-overlay" onclick="closeModal(event)">
   <div id="modal">
     <div class="modal-title">
-      <span>✏️ Редактирай запис — <span id="modal-date"></span></span>
+      <span>✏️ Редактирай — <span id="modal-date-lbl"></span></span>
       <button class="modal-close" onclick="closeModalDirect()">✕</button>
     </div>
     <div id="modal-body"></div>
-    <div style="display:flex;gap:.6rem;margin-top:1rem">
-      <button class="bsave ok" style="flex:1" onclick="saveModal()">💾 Запази промените</button>
-      <button class="bsave" style="flex:0 0 auto;padding:.42rem .9rem" onclick="closeModalDirect()">Отказ</button>
+    <div style="display:flex;gap:.6rem;margin-top:.9rem">
+      <button class="bsave ok" style="flex:1;margin-top:0" onclick="saveModal()">💾 Запази промените</button>
+      <button class="bsave" style="flex:0 0 auto;padding:.42rem .9rem;margin-top:0" onclick="closeModalDirect()">Отказ</button>
     </div>
   </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
-// ══════════════════════════════════════════
-// EXCEL DATA  [date,wake,n1sl,n1w,n2sl,n2w,n3sl,n3w,bed_start,bed_sleep,notes]
-// ══════════════════════════════════════════
+// ══════════════════════════════════
+// EXCEL DATA [date,wake,n1sl,n1w,n2sl,n2w,n3sl,n3w,bed_start,bed_sleep,notes]
+// ══════════════════════════════════
 const XL=[
-  ["14.02","06:34","08:37","09:07","11:13","11:47","13:44","14:20","18:50","19:00","чесане на уши 03:30-05:00 ръце / смяна памперс"],
+  ["14.02","06:34","08:37","09:07","11:13","11:47","13:44","14:20","18:50","19:00","чесане на уши 03:30-05:00 ръце"],
   ["15.02","06:24","08:51","09:57","12:14","13:54","16:19","17:00","19:04","19:21","кърмене на всяко будене / неспокоен сън"],
-  ["16.02","06:34","08:43","10:49","12:57","13:55","16:09","16:49","19:00","19:09","22:48-23:20 носене / 01:29 яде / 05ч ръце до 07ч"],
+  ["16.02","06:34","08:43","10:49","12:57","13:55","16:09","16:49","19:00","19:09","22:48-23:20 носене / 01:29 яде / 05ч ръце"],
   ["17.02","06:58","09:17","10:25","12:50","15:10","17:39","18:20","20:43","20:48","22:30 спалня / 02ч кърмене / 05ч памперс"],
   ["18.02","06:45","09:00","09:59","12:28","13:10","13:50","15:25","20:33","20:35","22ч трудно / 01:30 до 02:20 / 04:00 биба"],
   ["19.02","06:58","09:31","09:45","11:23","11:57","14:37","16:07","18:24","18:42","20:15 будене / 22:15 събуди се / 01:40 яде"],
-  ["20.02","06:52","09:15","10:52","13:25","14:38","17:17","17:56","20:22","20:25","22ч спалня / 01:50 кърмене до 02:30 / 04ч гушкане"],
+  ["20.02","06:52","09:15","10:52","13:25","14:38","17:17","17:56","20:22","20:25","22ч спалня / 01:50 кърмене до 02:30"],
   ["21.02","06:22","08:45","10:01","12:45","13:25","16:10","17:45","19:40","19:45","22:49 заспа / 01:30 кърмене / 03:30 не ядеше"],
-  ["22.02","07:22","10:07","11:10","13:45","15:20","18:01","18:34","20:52","21:00","21:45 кърмене / 00ч / 01:30 / 03:30 биба / 04:30"],
-  ["23.02","07:14","09:50","10:30","12:48","14:48","17:25","18:04","20:34","20:38","00:30 кърмене / 03ч сама заспа / 04:20 кърмене"],
-  ["24.02","07:18","10:00","12:05","14:38","15:09","17:46","18:31","20:36","20:45","22:10 събуждане / 00ч яде / 03:47 яде / 05ч"],
+  ["22.02","07:22","10:07","11:10","13:45","15:20","18:01","18:34","20:52","21:00","21:45 кърмене / 00ч / 01:30 / 03:30 биба"],
+  ["23.02","07:14","09:50","10:30","12:48","14:48","17:25","18:04","20:34","20:38","00:30 кърмене / 03ч сама заспа / 04:20"],
+  ["24.02","07:18","10:00","12:05","14:38","15:09","17:46","18:31","20:36","20:45","22:10 събуждане / 00ч яде / 03:47 яде"],
   ["25.02","06:18","08:58","10:58","13:48","14:40","17:20","18:01","20:21","20:26","21:30 / 22:11 / 01:30 / 03:20 / 05:30"],
   ["26.02","07:30","10:28","11:06","13:37","15:21","17:36","18:12","20:39","21:08","будене на всеки час 00:30/01:30/02:30/03:30"],
   ["27.02","07:36","10:20","10:49","13:55","14:54","17:51","18:44","","20:40","01:30 кърмене / 04:30 трудно на ръце"],
-  ["28.02","06:43","10:24","11:52","13:49","14:22","15:15","16:36","21:47","21:55","23:09 / 00:30 / 03:30 ядене / 05:43"],
+  ["28.02","06:43","10:24","11:52","13:49","14:22","15:15","16:36","21:47","21:55","23:09 / 00:30 / 03:30 ядене"],
   ["1.03","08:40","11:10","13:24","16:20","17:47","","","20:44","20:55","01:30 кърмене / 03:30 без биба / 05ч"],
   ["2.03","08:20","11:17","13:57","16:59","17:59","","","20:58","21:07","22ч будене / 01:10 / 03:30 само с кърмене"],
   ["3.03","07:05","09:43","10:13","12:36","14:13","16:24","17:42","20:05","20:11","21:06 будене / 22:06 ръце / 01:30"],
   ["4.03","07:26","09:15","09:28","10:50","13:08","15:30","16:20","20:19","20:33","21:30 / кърмене / 01:30 ръце до 02:30"],
   ["5.03","06:26","09:26","10:00","12:40","14:00","16:40","16:52","","19:18","заспа в колата / 22:20 / 00:50 ръце"],
   ["6.03","06:58","10:15","11:12","13:00","13:20","14:55","16:42","19:36","19:45","много се чеши / 22ч / 00:27-01:30 голям рев"],
-  ["7.03","08:02","10:59","12:35","15:37","16:17","","","19:17","19:23","22:40 спалня / 02:30 трудно 40мин / 05:20"],
-  ["8.03","06:16","09:16","10:47","13:42","15:13","18:10","18:45","19:32","19:45","21:30 кърмене / 22:10 спалня / 00:30 / 01:47"],
+  ["7.03","08:02","10:59","12:35","15:37","16:17","","","19:17","19:23","22:40 спалня / 02:30 трудно 40мин"],
+  ["8.03","06:16","09:16","10:47","13:42","15:13","18:10","18:45","19:32","19:45","21:30 кърмене / 22:10 спалня / 00:30"],
   ["9.03","07:16","09:44","11:32","14:51","15:10","17:56","18:10","20:05","20:15","22:30 будене / 01:50 ръце 1ч / 04:40"],
   ["10.03","06:00","09:14","10:50","13:43","15:14","18:17","18:50","20:32","21:08","22:23 / 00:15 кърмене / 02:15 / 04:30"],
-  ["11.03","06:43","10:03","10:30","13:34","15:43","18:33","19:10","21:07","21:13","22:52 кърмене / 02:50 носене до 03:30 / 04:40"],
-  ["12.03","06:45","09:50","11:27","14:28","15:44","18:26","18:55","20:57","21:16","22:25 събуди / 01:30 носене / 04:30 кърмене"],
+  ["11.03","06:43","10:03","10:30","13:34","15:43","18:33","19:10","21:07","21:13","22:52 кърмене / 02:50 носене до 03:30"],
+  ["12.03","06:45","09:50","11:27","14:28","15:44","18:26","18:55","20:57","21:16","22:25 събуди / 01:30 носене / 04:30"],
   ["13.03","06:15","","","","","","","","",""],
 ];
 
-// ══════════════════════════════════════════
+// ══════════════════════════════════
 // HELPERS
-// ══════════════════════════════════════════
+// ══════════════════════════════════
 const $=id=>document.getElementById(id);
 const moods={};
 function sm(g,btn,v){document.querySelectorAll('#'+g+' .mb').forEach(b=>b.classList.remove('on'));btn.classList.add('on');moods[g]=v}
@@ -374,54 +372,81 @@ function setMoodBtn(g,v){if(!v)return;document.querySelectorAll('#'+g+' .mb').fo
 function tm(t){if(!t)return null;const p=t.split(':');if(p.length<2)return null;const h=parseInt(p[0]),m=parseInt(p[1]);if(isNaN(h)||isNaN(m))return null;return h*60+m}
 function df(a,b){if(a===null||b===null)return null;let d=b-a;if(d<0)d+=1440;if(d>720)return null;return d}
 function fh(m){if(m===null||m===undefined)return'—';if(m===0)return'0м';const h=Math.floor(m/60),mn=m%60;return h>0?(mn>0?h+'ч '+mn+'м':h+'ч'):mn+'м'}
-function todayS(){const d=new Date();return d.getDate()+'.'+(d.getMonth()+1<10?'0':'')+(d.getMonth()+1)}
-function dsv(d){const p=d.split('.');if(p.length<2)return 0;return parseInt(p[1])*100+parseInt(p[0])}
 
-// ══════════════════════════════════════════
+// Parse "DD.MM" → Date object (year = current or past)
+function parseDate(s){
+  const p=s.split('.');if(p.length<2)return null;
+  const d=parseInt(p[0]),mo=parseInt(p[1]);
+  const now=new Date(),yr=now.getFullYear();
+  let dt=new Date(yr,mo-1,d);
+  if(dt>now)dt=new Date(yr-1,mo-1,d);
+  return dt;
+}
+function todayS(){const d=new Date();return d.getDate()+'.'+(d.getMonth()+1<10?'0':'')+(d.getMonth()+1)}
+function dsv(s){const p=s.split('.');if(p.length<2)return 0;return parseInt(p[1])*100+parseInt(p[0])}
+function fmtDateStr(dt){return dt.getDate()+'.'+(dt.getMonth()+1<10?'0':'')+(dt.getMonth()+1)}
+
+// Generate all dates from first Excel entry to today
+function allDates(){
+  const first=parseDate('14.02');
+  const today=new Date();
+  const dates=[];
+  for(let d=new Date(first);d<=today;d.setDate(d.getDate()+1))
+    dates.push(fmtDateStr(new Date(d)));
+  return dates.reverse(); // newest first
+}
+
+// ══════════════════════════════════
 // STORAGE
-// ══════════════════════════════════════════
+// ══════════════════════════════════
 const KEY='karina_v4';
 function getLog(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch{return[]}}
-function saveLog(l){localStorage.setItem(KEY,JSON.stringify(l.slice(0,120)))}
+function saveLog(l){localStorage.setItem(KEY,JSON.stringify(l.slice(0,200)))}
 function getEntry(date){return getLog().find(e=>e.date===date)||{date}}
 function upsert(patch){
   const log=getLog(),i=log.findIndex(e=>e.date===patch.date);
   if(i>=0)log[i]=Object.assign({},log[i],patch);else log.unshift(patch);
-  saveLog(log);
-  if(patch.date===todayS())updateTodayStats();
+  saveLog(log);if(patch.date===todayS())updateTodayStats();
 }
 function getApiKey(){return localStorage.getItem('karina_key')||''}
 function doSaveKey(){
   const k=$('apikey').value.trim();
   if(!k){$('api-msg').textContent='⚠ Въведи ключ';return}
   localStorage.setItem('karina_key',k);
-  $('api-msg').style.color='var(--ok)';$('api-msg').textContent='✓ Запазен';
-  setTimeout(()=>$('api-msg').textContent='',2500);
+  $('api-msg').style.color='var(--ok)';$('api-msg').textContent='✓ API ключът е запазен';
+  setTimeout(()=>$('api-msg').textContent='',3000);
 }
-function clearLocal(){
-  if(confirm('Сигурен ли си? Excel историята остава.'))
-    {localStorage.removeItem(KEY);location.reload()}
-}
+function clearLocal(){if(confirm('Сигурен ли си? Excel историята остава.'))
+  {localStorage.removeItem(KEY);location.reload()}}
 
-// ══════════════════════════════════════════
-// FULL LOG
-// ══════════════════════════════════════════
+// ══════════════════════════════════
+// FULL LOG — merge user + XL
+// ══════════════════════════════════
+function xlEntry(r){return{date:r[0],morning_wake:r[1],nap1_sleep:r[2],nap1_wake:r[3],
+  nap2_sleep:r[4],nap2_wake:r[5],nap3_sleep:r[6],nap3_wake:r[7],
+  bed_start:r[8],bed_sleep:r[9],night_notes:r[10],source:'xl'}}
+
 function fullLog(){
   const user=getLog(),ud=new Set(user.map(e=>e.date));
-  const xl=XL.filter(r=>!ud.has(r[0])&&(r[1]||r[9])).map(r=>({
-    date:r[0],morning_wake:r[1],nap1_sleep:r[2],nap1_wake:r[3],
-    nap2_sleep:r[4],nap2_wake:r[5],nap3_sleep:r[6],nap3_wake:r[7],
-    bed_start:r[8],bed_sleep:r[9],night_notes:r[10],source:'xl'
-  }));
+  const xl=XL.filter(r=>!ud.has(r[0])).map(xlEntry);
   return[...user,...xl].sort((a,b)=>dsv(b.date)-dsv(a.date));
 }
 
-// ══════════════════════════════════════════
-// SAVE FUNCTIONS
-// ══════════════════════════════════════════
-function quickSave(field,inputId){
-  const date=$('date').value||todayS(),p={date};p[field]=$(inputId).value;upsert(p);
+function getAnyEntry(date){
+  const user=getLog().find(e=>e.date===date);if(user)return user;
+  const xl=XL.find(r=>r[0]===date);if(xl)return xlEntry(xl);
+  return{date};
 }
+
+function napDur(e,n){
+  return e['nap'+n+'_dur']!=null?e['nap'+n+'_dur']:df(tm(e['nap'+n+'_sleep']),tm(e['nap'+n+'_wake']));
+}
+
+// ══════════════════════════════════
+// SAVE
+// ══════════════════════════════════
+function quickSave(field,inputId){const date=$('date').value||todayS(),p={date};p[field]=$(inputId).value;upsert(p)}
+
 function saveNap(n){
   const date=$('date').value||todayS();
   const s=$('n'+n+'s').value,sl=$('n'+n+'sl').value,w=$('n'+n+'w').value;
@@ -440,24 +465,23 @@ function saveNap(n){
   if(n===3&&w&&tm(w)>16*60+15)
     setTimeout(()=>alert('⚠️ Дрямка 3 приключи в '+w+' — след 16:15!\nТова може да затрудни вечерното заспиване.'),200);
 }
+
 function saveNight(){
   const date=$('date').value||todayS();
   const bsl=$('bsl').value,nw=$('nw').value,nd=df(tm(bsl),tm(nw));
   const p={date,bed_start:$('br').value,bed_sleep:bsl,night_notes:$('nn').value,next_wake:nw,itch:moods['it']||''};
-  if(nd!==null)p.night_dur=nd;
-  upsert(p);
+  if(nd!==null)p.night_dur=nd;upsert(p);
   const btn=$('sbn');btn.textContent='✓ Запазено!';btn.classList.add('ok');
   setTimeout(()=>{btn.textContent='💾 Запази нощните данни';btn.classList.remove('ok')},2500);
 }
 
-// ══════════════════════════════════════════
+// ══════════════════════════════════
 // TODAY STATS
-// ══════════════════════════════════════════
+// ══════════════════════════════════
 function updateTodayStats(){
   const e=getEntry(todayS());
-  function nd(n){return e['nap'+n+'_dur']!=null?e['nap'+n+'_dur']:df(tm(e['nap'+n+'_sleep']),tm(e['nap'+n+'_wake']))}
-  const d1=nd(1),d2=nd(2),d3=nd(3),dt=(d1||0)+(d2||0)+(d3||0);
-  const cnt=[d1,d2,d3].filter(x=>x!=null&&x>0).length;
+  const d1=napDur(e,1),d2=napDur(e,2),d3=napDur(e,3);
+  const dt=(d1||0)+(d2||0)+(d3||0),cnt=[d1,d2,d3].filter(x=>x!=null&&x>0).length;
   if(dt>0||e.bed_sleep){
     $('today-stats').style.display='block';
     $('ts-day').textContent=dt>0?fh(dt):'—';
@@ -465,17 +489,14 @@ function updateTodayStats(){
     $('ts-naps').textContent=cnt+'/3';
   }
   for(let n=1;n<=3;n++){
-    const dur=nd(n);
-    if(dur!=null&&dur>0){
-      const ns=$('ns'+n);if(ns)ns.textContent='('+fh(dur)+')';
-      const nb=$('nb'+n);if(nb)nb.classList.add('saved');
-    }
+    const dur=napDur(e,n);
+    if(dur!=null&&dur>0){const ns=$('ns'+n);if(ns)ns.textContent='('+fh(dur)+')';const nb=$('nb'+n);if(nb)nb.classList.add('saved')}
   }
 }
 
-// ══════════════════════════════════════════
+// ══════════════════════════════════
 // TABS
-// ══════════════════════════════════════════
+// ══════════════════════════════════
 function ST(t){
   ['day','history','trends','settings'].forEach(id=>{
     $('tp-'+id).classList.toggle('on',id===t);
@@ -485,18 +506,23 @@ function ST(t){
   if(t==='trends')renderTrends();
 }
 
-// ══════════════════════════════════════════
-// HISTORY
-// ══════════════════════════════════════════
-function napDur(e,n){return e['nap'+n+'_dur']!=null?e['nap'+n+'_dur']:df(tm(e['nap'+n+'_sleep']),tm(e['nap'+n+'_wake']))}
-
+// ══════════════════════════════════
+// HISTORY — show ALL dates
+// ══════════════════════════════════
 function renderHistory(){
-  const log=fullLog();
-  $('hlist').innerHTML=log.slice(0,40).map(e=>{
+  const dates=allDates();
+  const fl=fullLog();
+  const byDate={};fl.forEach(e=>byDate[e.date]=e);
+
+  $('hlist').innerHTML=dates.map(date=>{
+    const e=byDate[date]||{date};
     const d1=napDur(e,1),d2=napDur(e,2),d3=napDur(e,3);
     const dt=(d1||0)+(d2||0)+(d3||0);
     const nd=e.night_dur!=null?e.night_dur:df(tm(e.bed_sleep),tm(e.next_wake));
-    const isToday=e.date===todayS(),isXl=e.source==='xl';
+    const isToday=date===todayS();
+    const isXl=e.source==='xl';
+    const hasData=!!(e.morning_wake||e.bed_sleep||d1||d2||d3);
+
     const labels=['🌅','☀️','🌆'],sleeps=[e.nap1_sleep,e.nap2_sleep,e.nap3_sleep];
     const wakes=[e.nap1_wake,e.nap2_wake,e.nap3_wake],durs=[d1,d2,d3];
     const mds=[e.nap1_mood,e.nap2_mood,e.nap3_mood],prevW=[e.morning_wake,e.nap1_wake,e.nap2_wake];
@@ -508,9 +534,17 @@ function renderHistory(){
       }
     }
     const napNotes=[e.nap1_note,e.nap2_note,e.nap3_note].filter(Boolean).join(' / ');
-    const editBtn=isXl?'':'<button class="hedit-btn" onclick="openModal(\''+e.date+'\')">✏️ Редактирай</button>';
+    const editBtn='<button class="hedit-btn" onclick="openModal(\''+date+'\')">✏️ Редактирай</button>';
+
+    if(!hasData){
+      return '<div class="he empty-entry">'+
+        '<div class="hdate">📅 '+date+(isToday?' <span class="badge badge-today">Днес</span>':'')+'<span class="badge badge-empty" style="margin-left:4px">Без данни</span>'+editBtn+'</div>'+
+        '<div class="hrow" style="font-style:italic;opacity:.6">Няма въведени данни за този ден</div>'+
+        '</div>';
+    }
+
     return '<div class="he'+(isToday?' today-entry':'')+'">'+
-      '<div class="hdate">📅 '+e.date+(isToday?' <span class="badge badge-today">Днес</span>':'')+(isXl?' <span class="badge badge-xl">Excel</span>':'')+editBtn+'</div>'+
+      '<div class="hdate">📅 '+date+(isToday?' <span class="badge badge-today">Днес</span>':'')+(isXl?' <span class="badge badge-xl">Excel</span>':'')+editBtn+'</div>'+
       (e.morning_wake?'<div class="hrow">⏰ Събуждане <strong>'+e.morning_wake+'</strong></div>':'')+
       (pills.length?'<div class="hnaps">'+pills.join('')+'</div>':'<div class="hrow">— без дрямки</div>')+
       '<div class="hrow">☀️ Дневен: <strong>'+fh(dt)+'</strong> &nbsp;|&nbsp; 🌙 Заспиване: <strong>'+(e.bed_sleep||'—')+'</strong>'+(nd?' &nbsp;|&nbsp; Нощен: <strong>'+fh(nd)+'</strong>':'')+
@@ -519,148 +553,155 @@ function renderHistory(){
       (e.night_notes?'<div class="hnote">💬 '+e.night_notes.slice(0,140)+(e.night_notes.length>140?'…':'')+'</div>':'')+
       (napNotes?'<div class="hnote">🗒 '+napNotes.slice(0,120)+'</div>':'')+
       '</div>';
-  }).join('')||'<p style="color:var(--muted);font-size:.82rem">Няма записи.</p>';
+  }).join('');
 }
 
-// ══════════════════════════════════════════
-// EDIT MODAL
-// ══════════════════════════════════════════
+// ══════════════════════════════════
+// MODAL EDIT
+// ══════════════════════════════════
 let modalDate='';
 function openModal(date){
   modalDate=date;
-  const e=getEntry(date);
-  $('modal-date').textContent=date;
-  function row(label,id,val){return'<div class="f" style="margin-bottom:.65rem"><label>'+label+'</label><input type="time" id="me-'+id+'" value="'+(val||'')+'" style="background:var(--warm)"/></div>'}
-  function rowText(label,id,val){return'<div class="f" style="margin-bottom:.65rem"><label>'+label+'</label><textarea id="me-'+id+'" style="background:var(--warm);min-height:50px">'+(val||'')+'</textarea></div>'}
+  const e=getAnyEntry(date);
+  $('modal-date-lbl').textContent=date;
+  function tf(label,id,val){return'<div class="f" style="margin-bottom:.6rem"><label>'+label+'</label><input type="time" id="me-'+id+'" value="'+(val||'')+'"/></div>'}
+  function ta(label,id,val){return'<div class="f" style="margin-bottom:.6rem"><label>'+label+'</label><textarea id="me-'+id+'" style="min-height:48px">'+(val||'')+'</textarea></div>'}
   $('modal-body').innerHTML=
-    '<div class="fg" style="margin-bottom:.5rem">'+
-      row('Сутрешно събуждане','wake',e.morning_wake)+
-    '</div>'+
-    '<p style="font-size:.7rem;font-weight:600;color:var(--terra);text-transform:uppercase;margin:.5rem 0 .4rem">🌅 Дрямка 1</p>'+
-    '<div class="fg3">'+row('Заспиване','n1sl',e.nap1_sleep)+row('Събуждане','n1w',e.nap1_wake)+row('Приспиване','n1s',e.nap1_start)+'</div>'+
-    rowText('Бележки дрямка 1','n1note',e.nap1_note)+
-    '<p style="font-size:.7rem;font-weight:600;color:var(--terra);text-transform:uppercase;margin:.5rem 0 .4rem">☀️ Дрямка 2</p>'+
-    '<div class="fg3">'+row('Заспиване','n2sl',e.nap2_sleep)+row('Събуждане','n2w',e.nap2_wake)+row('Приспиване','n2s',e.nap2_start)+'</div>'+
-    rowText('Бележки дрямка 2','n2note',e.nap2_note)+
-    '<p style="font-size:.7rem;font-weight:600;color:var(--terra);text-transform:uppercase;margin:.5rem 0 .4rem">🌆 Дрямка 3</p>'+
-    '<div class="fg3">'+row('Заспиване','n3sl',e.nap3_sleep)+row('Събуждане','n3w',e.nap3_wake)+row('Приспиване','n3s',e.nap3_start)+'</div>'+
-    rowText('Бележки дрямка 3','n3note',e.nap3_note)+
-    '<p style="font-size:.7rem;font-weight:600;color:var(--terra);text-transform:uppercase;margin:.5rem 0 .4rem">🌙 Нощ</p>'+
-    '<div class="fg">'+row('Начало рутина','br',e.bed_start)+row('Нощно заспиване','bsl',e.bed_sleep)+'</div>'+
-    '<div class="fg">'+row('Сутрешно събуждане (следващ ден)','nw',e.next_wake)+'</div>'+
-    rowText('Нощни бележки','nn',e.night_notes);
+    '<div class="fg">'+tf('Сутрешно събуждане','wake',e.morning_wake)+'</div>'+
+    '<p class="msec">🌅 Дрямка 1</p>'+
+    '<div class="fg3">'+tf('Заспиване','n1sl',e.nap1_sleep)+tf('Събуждане','n1w',e.nap1_wake)+tf('Приспиване','n1s',e.nap1_start)+'</div>'+
+    ta('Бележки дрямка 1','n1note',e.nap1_note)+
+    '<p class="msec">☀️ Дрямка 2</p>'+
+    '<div class="fg3">'+tf('Заспиване','n2sl',e.nap2_sleep)+tf('Събуждане','n2w',e.nap2_wake)+tf('Приспиване','n2s',e.nap2_start)+'</div>'+
+    ta('Бележки дрямка 2','n2note',e.nap2_note)+
+    '<p class="msec">🌆 Дрямка 3</p>'+
+    '<div class="fg3">'+tf('Заспиване','n3sl',e.nap3_sleep)+tf('Събуждане','n3w',e.nap3_wake)+tf('Приспиване','n3s',e.nap3_start)+'</div>'+
+    ta('Бележки дрямка 3','n3note',e.nap3_note)+
+    '<p class="msec">🌙 Нощен сън</p>'+
+    '<div class="fg">'+tf('Начало рутина','br',e.bed_start)+tf('Нощно заспиване','bsl',e.bed_sleep)+'</div>'+
+    '<div class="fg">'+tf('Следващо сутрешно събуждане','nw',e.next_wake)+'</div>'+
+    ta('Нощни бележки','nn',e.night_notes);
   $('modal-overlay').classList.add('open');
+  setTimeout(()=>$('modal').scrollIntoView({behavior:'smooth',block:'start'}),50);
 }
 function saveModal(){
-  function gv(id){const el=$('me-'+id);return el?el.value.trim():''}
+  const gv=id=>{const el=$('me-'+id);return el?el.value.trim():''};
   const n1sl=gv('n1sl'),n1w=gv('n1w'),n2sl=gv('n2sl'),n2w=gv('n2w'),n3sl=gv('n3sl'),n3w=gv('n3w');
   const bsl=gv('bsl'),nw=gv('nw');
-  const d1=df(tm(n1sl),tm(n1w)),d2=df(tm(n2sl),tm(n2w)),d3=df(tm(n3sl),tm(n3w));
-  const nd=df(tm(bsl),tm(nw));
-  const patch={date:modalDate,
-    morning_wake:gv('wake'),
+  const d1=df(tm(n1sl),tm(n1w)),d2=df(tm(n2sl),tm(n2w)),d3=df(tm(n3sl),tm(n3w)),nd=df(tm(bsl),tm(nw));
+  // Promote XL to user log if needed
+  const log=getLog();
+  if(!log.find(e=>e.date===modalDate)){
+    const xl=XL.find(r=>r[0]===modalDate);
+    if(xl)log.unshift(xlEntry(xl));saveLog(log);
+  }
+  upsert({date:modalDate,morning_wake:gv('wake'),
     nap1_sleep:n1sl,nap1_wake:n1w,nap1_start:gv('n1s'),nap1_note:gv('n1note'),nap1_dur:d1,
     nap2_sleep:n2sl,nap2_wake:n2w,nap2_start:gv('n2s'),nap2_note:gv('n2note'),nap2_dur:d2,
     nap3_sleep:n3sl,nap3_wake:n3w,nap3_start:gv('n3s'),nap3_note:gv('n3note'),nap3_dur:d3,
-    bed_start:gv('br'),bed_sleep:bsl,night_notes:gv('nn'),next_wake:nw,night_dur:nd
-  };
-  // If editing XL entry, copy it to user log first
-  const log=getLog();
-  if(!log.find(e=>e.date===modalDate)){
-    // Promote from XL
-    const xl=XL.find(r=>r[0]===modalDate);
-    if(xl)log.unshift({date:xl[0],morning_wake:xl[1],nap1_sleep:xl[2],nap1_wake:xl[3],nap2_sleep:xl[4],nap2_wake:xl[5],nap3_sleep:xl[6],nap3_wake:xl[7],bed_start:xl[8],bed_sleep:xl[9],night_notes:xl[10]});
-    saveLog(log);
-  }
-  upsert(patch);
-  closeModalDirect();
-  renderHistory();
+    bed_start:gv('br'),bed_sleep:bsl,night_notes:gv('nn'),next_wake:nw,night_dur:nd});
+  closeModalDirect();renderHistory();
 }
 function closeModal(ev){if(ev.target===$('modal-overlay'))closeModalDirect()}
 function closeModalDirect(){$('modal-overlay').classList.remove('open')}
 
-// ══════════════════════════════════════════
+// ══════════════════════════════════
 // TRENDS
-// ══════════════════════════════════════════
+// ══════════════════════════════════
 let charts=[];
 function renderTrends(){
   charts.forEach(c=>{try{c.destroy()}catch(e){}});charts=[];
-  const log=fullLog().slice(0,28).reverse();
+  const log=fullLog().filter(e=>{const d1=napDur(e,1),d2=napDur(e,2),d3=napDur(e,3);return e.bed_sleep||(d1||d2||d3)}).slice(0,28).reverse();
   const labels=log.map(e=>e.date);
-  const gc=()=>getComputedStyle(document.documentElement);
-  const tc='rgba(140,112,96,.6)',gc2='rgba(128,128,128,.1)';
-
-  // Chart 1: bed time (minutes after 18:00)
+  const tc='rgba(140,112,96,.55)',gc='rgba(128,128,128,.1)';
   const bedData=log.map(e=>{const t=tm(e.bed_sleep);return t!==null?t-18*60:null});
   charts.push(new Chart($('ch1'),{type:'bar',data:{labels,datasets:[{label:'Заспиване',data:bedData,
     backgroundColor:bedData.map(v=>v===null?'transparent':v>180?'#C0625A':v<60?'#7BAE8C':'#3B8BD4'),
     borderRadius:3,barPercentage:.55}]},
     options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
-      scales:{x:{ticks:{color:tc,font:{size:8},maxRotation:45},grid:{color:gc2}},
-        y:{min:0,max:240,ticks:{color:tc,font:{size:8},callback:v=>{const h=Math.floor(v/60)+18,m=v%60;return h+':'+(m<10?'0':'')+m},stepSize:60},grid:{color:gc2}}}}}));
-
-  // Chart 2: day total hours
-  const dayData=log.map(e=>{
-    const d1=napDur(e,1)||0,d2=napDur(e,2)||0,d3=napDur(e,3)||0,dt=d1+d2+d3;
-    return dt>0?Math.round(dt/6)/10:null
-  });
-  charts.push(new Chart($('ch2'),{type:'line',data:{labels,datasets:[{label:'Дневен (ч)',data:dayData,
+      scales:{x:{ticks:{color:tc,font:{size:8},maxRotation:45},grid:{color:gc}},
+        y:{min:0,max:240,ticks:{color:tc,font:{size:8},callback:v=>{const h=Math.floor(v/60)+18,m=v%60;return h+':'+(m<10?'0':'')+m},stepSize:60},grid:{color:gc}}}}}));
+  const dayData=log.map(e=>{const dt=(napDur(e,1)||0)+(napDur(e,2)||0)+(napDur(e,3)||0);return dt>0?Math.round(dt/6)/10:null});
+  charts.push(new Chart($('ch2'),{type:'line',data:{labels,datasets:[{label:'Дневен',data:dayData,
     borderColor:'#D4A84A',backgroundColor:'rgba(212,168,74,.1)',
     pointBackgroundColor:dayData.map(v=>v===null?'transparent':v>3.5?'#C0625A':v<2?'#D4A84A':'#7BAE8C'),
     tension:.35,fill:true,pointRadius:4,borderWidth:2}]},
     options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
-      scales:{x:{ticks:{color:tc,font:{size:8},maxRotation:45},grid:{color:gc2}},
-        y:{min:0,max:6,ticks:{color:tc,font:{size:8},callback:v=>v+'ч',stepSize:1},grid:{color:gc2}}}}}));
-
-  // Chart 3: night sleep hours
+      scales:{x:{ticks:{color:tc,font:{size:8},maxRotation:45},grid:{color:gc}},
+        y:{min:0,max:6,ticks:{color:tc,font:{size:8},callback:v=>v+'ч',stepSize:1},grid:{color:gc}}}}}));
   const nightData=log.map(e=>{const nd=e.night_dur!=null?e.night_dur:df(tm(e.bed_sleep),tm(e.next_wake));return nd?Math.round(nd/6)/10:null});
-  charts.push(new Chart($('ch3'),{type:'line',data:{labels,datasets:[{label:'Нощен (ч)',data:nightData,
+  charts.push(new Chart($('ch3'),{type:'line',data:{labels,datasets:[{label:'Нощен',data:nightData,
     borderColor:'#7090C4',backgroundColor:'rgba(112,144,196,.1)',
     pointBackgroundColor:nightData.map(v=>v===null?'transparent':v<9?'#C0625A':v>=11?'#7BAE8C':'#D4A84A'),
     tension:.35,fill:true,pointRadius:4,borderWidth:2}]},
     options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
-      scales:{x:{ticks:{color:tc,font:{size:8},maxRotation:45},grid:{color:gc2}},
-        y:{min:0,max:14,ticks:{color:tc,font:{size:8},callback:v=>v+'ч',stepSize:2},grid:{color:gc2}}}}}));
+      scales:{x:{ticks:{color:tc,font:{size:8},maxRotation:45},grid:{color:gc}},
+        y:{min:0,max:14,ticks:{color:tc,font:{size:8},callback:v=>v+'ч',stepSize:2},grid:{color:gc}}}}}));
 }
 
-// ══════════════════════════════════════════
-// ANALYZE
-// ══════════════════════════════════════════
-async function analyze(){
+// ══════════════════════════════════
+// AI ANALYZE — daily + weekly
+// ══════════════════════════════════
+async function analyze(mode){
   const apiKey=getApiKey();
-  if(!apiKey){alert('⚠️ Моля добави Anthropic API ключ в таб ⚙️ Настройки\n\nВземи безплатен ключ от console.anthropic.com → API Keys');ST('settings');return}
-  const btn=$('abtn'),rc=$('rc'),rb=$('rb');
-  const date=$('date').value||todayS();
-  const e=getEntry(date);
-  const g=(id,fb)=>{const v=$(id);return(v&&v.value)||fb||''};
-  const wt=g('wt',e.morning_wake),n1sl=g('n1sl',e.nap1_sleep),n1w=g('n1w',e.nap1_wake);
-  const n2sl=g('n2sl',e.nap2_sleep),n2w=g('n2w',e.nap2_wake);
-  const n3sl=g('n3sl',e.nap3_sleep),n3w=g('n3w',e.nap3_wake);
-  const bsl=g('bsl',e.bed_sleep),br=g('br',e.bed_start),nn=g('nn',e.night_notes),nw=g('nw',e.next_wake);
-  const itch=moods['it']||e.itch||'';
-  const n1note=g('n1note',e.nap1_note),n2note=g('n2note',e.nap2_note),n3note=g('n3note',e.nap3_note);
-  const d1=napDur({...e,nap1_sleep:n1sl,nap1_wake:n1w},1)||0;
-  const d2=napDur({...e,nap2_sleep:n2sl,nap2_wake:n2w},2)||0;
-  const d3=napDur({...e,nap3_sleep:n3sl,nap3_wake:n3w},3)||0;
-  const dt=d1+d2+d3,nd=df(tm(bsl),tm(nw));
-  const ww1=df(tm(wt),tm(n1sl)),ww2=df(tm(n1w),tm(n2sl)),ww3=df(tm(n2w),tm(n3sl)),wwN=df(tm(n3w||n2w),tm(bsl));
-  const warns=[];
-  if(n3w&&tm(n3w)>16*60+15)warns.push('Дрямка 3 приключи в '+n3w+' — след 16:15');
-  if(dt>210)warns.push('Общ дневен сън '+fh(dt)+' — над 3.5ч');
-  if(bsl&&(tm(bsl)>21*60||tm(bsl)<18*60))warns.push('Заспиване '+bsl+' извън 19:00–19:30');
-  const recent=fullLog().filter(x=>x.date!==date).slice(0,5);
-  const ctx=recent.map(x=>{
-    const xd=(napDur(x,1)||0)+(napDur(x,2)||0)+(napDur(x,3)||0);
-    return x.date+': заспиване '+(x.bed_sleep||'—')+', дневен '+fh(xd)+', '+(x.night_notes||'').slice(0,60);
-  }).join('\n');
-  const prompt='Ти си консултант по бебешки сън. Анализираш Карина — 5м25д, атопичен дерматит, 3 дрямки. Цел: дрямка1 40-50м, дрямка2 75-90м, дрямка3 MAX 40м до 16:15. Рутина 18:30, заспиване 19:00–19:30. Общ дневен под 3.5ч. WW ~2.5–3ч.\n\nДАННИ '+date+':\n• Събуждане: '+(wt||'—')+'\n• Д1: '+n1sl+'–'+n1w+' ('+fh(d1)+') WW:'+fh(ww1)+(n1note?', '+n1note:'')+'\n• Д2: '+n2sl+'–'+n2w+' ('+fh(d2)+') WW:'+fh(ww2)+(n2note?', '+n2note:'')+'\n• Д3: '+n3sl+'–'+n3w+' ('+fh(d3)+') WW:'+fh(ww3)+(n3note?', '+n3note:'')+'\n• WW нощ: '+fh(wwN)+'\n• Общо дневен: '+fh(dt)+'\n• Рутина '+br+', заспиване '+bsl+'\n• Нощ: '+(nn||'—')+'\n• Нощен сън: '+fh(nd)+'\n• Сърбеж: '+(itch||'—')+(warns.length?'\n⚠️ '+warns.join('; '):'')+'\n\nКОНТЕКСТ (5 дни):\n'+ctx+'\n\nАнализ на BG, топъл и конкретен:\n1. **Общата картина**\n2. **Какво работи добре**\n3. **Какво предизвиква затруднение**\n4. **Препоръка за утре** (1-2 неща)\nМакс 280 думи.';
-  btn.disabled=true;rc.style.display='block';
-  rb.innerHTML='<div class="dots"><span></span><span></span><span></span></div>&nbsp; Анализирам...';
+  if(!apiKey){alert('⚠️ Моля добави Anthropic API ключ в таб ⚙️ Настройки\n\nВземи ключ от console.anthropic.com → API Keys (изисква $5 кредити)');ST('settings');return}
+
+  const rc=$('rc'),rb=$('rb'),rct=$('rc-title');
+  rc.style.display='block';
+  rb.innerHTML='<div class="dots"><span></span><span></span><span></span></div>&nbsp; '+(mode==='week'?'Анализирам седмицата...':'Анализирам деня...');
+  rct.textContent=mode==='week'?'📊 Седмичен AI Анализ':'✨ Дневен AI Анализ';
   rc.scrollIntoView({behavior:'smooth',block:'start'});
+  $('abtn').disabled=true;$('wbtn').disabled=true;
+
+  let prompt='';
+
+  if(mode==='day'){
+    const date=$('date').value||todayS();
+    const e=getEntry(date);
+    const g=(id,fb)=>{const v=$(id);return(v&&v.value)||fb||''};
+    const wt=g('wt',e.morning_wake),n1sl=g('n1sl',e.nap1_sleep),n1w=g('n1w',e.nap1_wake);
+    const n2sl=g('n2sl',e.nap2_sleep),n2w=g('n2w',e.nap2_wake);
+    const n3sl=g('n3sl',e.nap3_sleep),n3w=g('n3w',e.nap3_wake);
+    const bsl=g('bsl',e.bed_sleep),br=g('br',e.bed_start),nn=g('nn',e.night_notes),nw=g('nw',e.next_wake);
+    const itch=moods['it']||e.itch||'';
+    const n1note=g('n1note',e.nap1_note),n2note=g('n2note',e.nap2_note),n3note=g('n3note',e.nap3_note);
+    const d1=(napDur({...e,nap1_sleep:n1sl,nap1_wake:n1w},1)||0);
+    const d2=(napDur({...e,nap2_sleep:n2sl,nap2_wake:n2w},2)||0);
+    const d3=(napDur({...e,nap3_sleep:n3sl,nap3_wake:n3w},3)||0);
+    const dt=d1+d2+d3,nd=df(tm(bsl),tm(nw));
+    const ww1=df(tm(wt),tm(n1sl)),ww2=df(tm(n1w),tm(n2sl)),ww3=df(tm(n2w),tm(n3sl)),wwN=df(tm(n3w||n2w),tm(bsl));
+    const warns=[];
+    if(n3w&&tm(n3w)>16*60+15)warns.push('Дрямка 3 приключи в '+n3w+' — след 16:15');
+    if(dt>210)warns.push('Общ дневен сън '+fh(dt)+' — над 3.5ч');
+    if(bsl&&(tm(bsl)>21*60||tm(bsl)<18*60))warns.push('Заспиване '+bsl+' извън 19:00–19:30');
+    const recent=fullLog().filter(x=>x.date!==date).slice(0,5).map(x=>{
+      const xd=(napDur(x,1)||0)+(napDur(x,2)||0)+(napDur(x,3)||0);
+      return x.date+': заспиване '+(x.bed_sleep||'—')+', дневен '+fh(xd)+', '+(x.night_notes||'').slice(0,60);
+    }).join('\n');
+    prompt='Ти си консултант по бебешки сън. Анализираш Карина — 5м25д, атопичен дерматит, 3 дрямки. Цел: д1 40-50м, д2 75-90м, д3 MAX 40м до 16:15. Рутина 18:30, заспиване 19:00–19:30. Дневен под 3.5ч. WW ~2.5–3ч.\n\nДАННИ '+date+':\n• Събуждане: '+(wt||'—')+'\n• Д1: '+n1sl+'–'+n1w+' ('+fh(d1)+') WW:'+fh(ww1)+(n1note?', '+n1note:'')+'\n• Д2: '+n2sl+'–'+n2w+' ('+fh(d2)+') WW:'+fh(ww2)+(n2note?', '+n2note:'')+'\n• Д3: '+n3sl+'–'+n3w+' ('+fh(d3)+') WW:'+fh(ww3)+(n3note?', '+n3note:'')+'\n• WW нощ: '+fh(wwN)+'\n• Общо дневен: '+fh(dt)+'\n• Рутина '+br+', заспиване '+bsl+'\n• Нощни бележки: '+(nn||'—')+'\n• Нощен сън: '+fh(nd)+'\n• Сърбеж: '+(itch||'—')+(warns.length?'\n⚠️ '+warns.join('; '):'')+'\n\nКОНТЕКСТ (5 дни):\n'+recent+'\n\nДай кратък топъл анализ на BG:\n1. **Общата картина**\n2. **Какво работи добре**\n3. **Какво предизвиква затруднение**\n4. **Препоръка за утре** (1-2 неща)\nМакс 280 думи.';
+  } else {
+    // WEEKLY
+    const log=fullLog().slice(0,7);
+    const summary=log.map(e=>{
+      const d1=napDur(e,1)||0,d2=napDur(e,2)||0,d3=napDur(e,3)||0,dt=d1+d2+d3;
+      const nd=e.night_dur!=null?e.night_dur:df(tm(e.bed_sleep),tm(e.next_wake));
+      const ww3end=e.nap3_wake;
+      const wwN=df(tm(e.nap3_wake||e.nap2_wake),tm(e.bed_sleep));
+      return e.date+': събуждане '+(e.morning_wake||'—')+
+        ', д1='+(e.nap1_sleep||'?')+'-'+(e.nap1_wake||'?')+' ('+fh(d1)+')'+
+        ', д2='+(e.nap2_sleep||'?')+'-'+(e.nap2_wake||'?')+' ('+fh(d2)+')'+
+        ', д3='+(e.nap3_sleep||'?')+'-'+(e.nap3_wake||'?')+' ('+fh(d3)+')'+
+        ', общо дневен='+fh(dt)+', заспиване='+(e.bed_sleep||'—')+', нощен='+fh(nd)+
+        (e.itch?', сърбеж='+e.itch:'')+
+        (e.night_notes?', нощ: '+e.night_notes.slice(0,80):'');
+    }).join('\n');
+    prompt='Ти си консултант по бебешки сън. Карина — 5м25д, атопичен дерматит, 3 дрямки. Цел: д1 40-50м, д2 75-90м, д3 MAX 40м до 16:15. Рутина 18:30, заспиване 19:00–19:30. Дневен под 3.5ч. WW ~2.5–3ч.\n\nДАННИ ЗА ПОСЛЕДНИТЕ 7 ДНИ:\n'+summary+'\n\nНаправи задълбочен седмичен анализ на BG:\n1. **Обобщение на седмицата** — основни тенденции\n2. **Нощен сън** — динамика, подобрение или влошаване\n3. **Дневни дрямки** — спазват ли се интервалите и продължителностите\n4. **Атопичен дерматит** — влияние върху съня тази седмица\n5. **Топ 3 проблема** — най-повтарящите се модели\n6. **Препоръки за следващата седмица** — 2-3 конкретни промени\nБъди задълбочен, конкретен и насърчителен. Макс 450 думи.';
+  }
+
   try{
     const resp=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',
       headers:{'Content-Type':'application/json','x-api-key':apiKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,messages:[{role:'user',content:prompt}]})});
+      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1500,messages:[{role:'user',content:prompt}]})});
     if(!resp.ok){const err=await resp.json().catch(()=>({}));throw new Error((err.error&&err.error.message)||'HTTP '+resp.status)}
     const data=await resp.json();
     const text=(data.content||[]).map(b=>b.text||'').join('')||'Не получих отговор.';
@@ -668,12 +709,12 @@ async function analyze(){
   }catch(err){
     rb.innerHTML='<span style="color:var(--rose)">⚠️ '+(err.message||'Грешка.')+'<br><br>Провери API ключа в ⚙️ Настройки.</span>';
   }
-  btn.disabled=false;
+  $('abtn').disabled=false;$('wbtn').disabled=false;
 }
 
-// ══════════════════════════════════════════
+// ══════════════════════════════════
 // INIT
-// ══════════════════════════════════════════
+// ══════════════════════════════════
 (function(){
   const sc=document.getElementById('stars');
   for(let i=0;i<34;i++){
